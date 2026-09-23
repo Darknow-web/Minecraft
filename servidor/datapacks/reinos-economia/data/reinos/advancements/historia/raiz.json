@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:written_book"
+    },
+    "title": {
+      "text": "Crónicas de Valdrath",
+      "color": "gold"
+    },
+    "description": {
+      "text": "El reino cayó. Tú lo harás renacer. Probablemente."
+    },
+    "background": "minecraft:textures/block/deepslate_bricks.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "llegar": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "function": "reinos:bienvenida"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "parent": "reinos:historia/cap1_despertar",
+  "display": {
+    "icon": {
+      "item": "waystones:warp_stone"
+    },
+    "title": {
+      "text": "II. Los Caminos Perdidos"
+    },
+    "description": {
+      "text": "Consigue una piedra de viaje, un pergamino de waystone o la brújula del explorador."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "piedra": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "waystones:warp_stone"
+            ]
+          }
+        ]
+      }
+    },
+    "pergamino": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "waystones:warp_scroll"
+            ]
+          }
+        ]
+      }
+    },
+    "retorno": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "waystones:return_scroll"
+            ]
+          }
+        ]
+      }
+    },
+    "vinculado": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "waystones:bound_scroll"
+            ]
+          }
+        ]
+      }
+    },
+    "brujula": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "explorerscompass:explorerscompass"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/cap2_caminos",
+    "experience": 100
+  },
+  "requirements": [
+    [
+      "piedra",
+      "pergamino",
+      "retorno",
+      "vinculado",
+      "brujula"
+    ]
+  ]
+}

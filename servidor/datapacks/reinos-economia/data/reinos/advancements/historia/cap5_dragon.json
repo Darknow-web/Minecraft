@@ -1,0 +1,211 @@
+{
+  "parent": "reinos:historia/cap4_arcano",
+  "display": {
+    "icon": {
+      "item": "iceandfire:dragonegg_red"
+    },
+    "title": {
+      "text": "V. Sangre de Dragón"
+    },
+    "description": {
+      "text": "Consigue un huevo de dragón o derrota a un dragón. Esto no puede salir mal."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "huevo_red": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_red"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_green": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_green"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_bronze": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_bronze"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_gray": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_gray"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_blue": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_blue"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_white": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_white"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_sapphire": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_sapphire"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_silver": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_silver"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_electric": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_electric"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_amythest": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_amythest"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_copper": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_copper"
+            ]
+          }
+        ]
+      }
+    },
+    "huevo_black": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "iceandfire:dragonegg_black"
+            ]
+          }
+        ]
+      }
+    },
+    "mato_fire_dragon": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "iceandfire:fire_dragon"
+        }
+      }
+    },
+    "mato_ice_dragon": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "iceandfire:ice_dragon"
+        }
+      }
+    },
+    "mato_lightning_dragon": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "iceandfire:lightning_dragon"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/cap5_dragon",
+    "experience": 400
+  },
+  "requirements": [
+    [
+      "huevo_red",
+      "huevo_green",
+      "huevo_bronze",
+      "huevo_gray",
+      "huevo_blue",
+      "huevo_white",
+      "huevo_sapphire",
+      "huevo_silver",
+      "huevo_electric",
+      "huevo_amythest",
+      "huevo_copper",
+      "huevo_black",
+      "mato_fire_dragon",
+      "mato_ice_dragon",
+      "mato_lightning_dragon"
+    ]
+  ]
+}

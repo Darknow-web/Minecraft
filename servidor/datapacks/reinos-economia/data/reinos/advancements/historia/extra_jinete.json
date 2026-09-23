@@ -1,0 +1,72 @@
+{
+  "parent": "reinos:historia/cap5_dragon",
+  "display": {
+    "icon": {
+      "item": "minecraft:saddle"
+    },
+    "title": {
+      "text": "Jinete del Cielo"
+    },
+    "description": {
+      "text": "Monta un dragón. Consejo: no mires abajo."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "fire_dragon": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "type": "iceandfire:fire_dragon"
+          }
+        }
+      }
+    },
+    "ice_dragon": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "type": "iceandfire:ice_dragon"
+          }
+        }
+      }
+    },
+    "lightning_dragon": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "type": "iceandfire:lightning_dragon"
+          }
+        }
+      }
+    },
+    "dragon": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "type": "dragonmounts:dragon"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/extra_jinete",
+    "experience": 300
+  },
+  "requirements": [
+    [
+      "fire_dragon",
+      "ice_dragon",
+      "lightning_dragon",
+      "dragon"
+    ]
+  ]
+}

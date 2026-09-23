@@ -1,0 +1,35 @@
+{
+  "parent": "reinos:historia/raiz",
+  "display": {
+    "icon": {
+      "item": "lightmanscurrency:coin_gold"
+    },
+    "title": {
+      "text": "Mercader de Valdrath"
+    },
+    "description": {
+      "text": "Consigue tu primera moneda de oro. El tesorero estaría orgulloso (y sospecharía)."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "oro": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "lightmanscurrency:coin_gold"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/extra_mercader"
+  }
+}

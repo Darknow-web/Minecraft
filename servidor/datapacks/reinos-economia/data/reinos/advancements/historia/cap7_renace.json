@@ -1,0 +1,75 @@
+{
+  "parent": "reinos:historia/cap6_guardianes",
+  "display": {
+    "icon": {
+      "item": "minecraft:dragon_head"
+    },
+    "title": {
+      "text": "VII. El Reino Renace"
+    },
+    "description": {
+      "text": "Derrota al Dragón del End y a uno de los grandes señores: Ignis, el Harbinger, el Leviatán o el Guardián del End."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "dragon_del_end": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:ender_dragon"
+        }
+      }
+    },
+    "ignis": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:ignis"
+        }
+      }
+    },
+    "the_harbinger": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:the_harbinger"
+        }
+      }
+    },
+    "the_leviathan": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:the_leviathan"
+        }
+      }
+    },
+    "ender_guardian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:ender_guardian"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/cap7_renace",
+    "experience": 2000
+  },
+  "requirements": [
+    [
+      "dragon_del_end"
+    ],
+    [
+      "ignis",
+      "the_harbinger",
+      "the_leviathan",
+      "ender_guardian"
+    ]
+  ]
+}

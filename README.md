@@ -109,7 +109,7 @@ docker attach reinos-de-aventura   # consola (salir: Ctrl+P, Ctrl+Q)
 ## 🚦 Primer arranque (IMPORTANTE para el rendimiento)
 
 1. Hazte operador desde la consola del servidor: `op TuNick`
-2. Agrega a tus amigos: `whitelist add NickDelAmigo` (la whitelist viene activada).
+2. La whitelist viene **apagada**: con TLauncher (modo offline) el panel suele guardar el UUID *premium* del nombre y el jugador no puede entrar. La protección la da el mod **Auth** (`/register` y `/login`). Para dar `op`, hazlo **mientras el jugador está conectado** (así usa su UUID correcto).
 3. **Pre-genera el mundo** (evita lag al explorar, porque hay muchas estructuras):
    ```
    chunky radius 3000
@@ -152,6 +152,13 @@ Para que un ajuste llegue a **todos** (servidor y jugadores), pon el archivo en 
 - **Misiones:** busca el **tablón de misiones** (Bounty Board) en las aldeas, o fabrícalo. Entrega lo que pide y recibe monedas o botín. Las misiones cambian con el tiempo.
 - **Tiendas:** fabrica un *Trader* de Lightman's Currency, pon objetos y precio, y otros jugadores te compran aunque no estés conectado.
 - **Admin:** para un comerciante NPC que venda objetos raros, crea un Trader en modo creativo y llénalo de objetos. Los precios de las misiones se ajustan en `servidor/datapacks/reinos-economia/`.
+
+## 📜 Crónicas de Valdrath (historia del servidor)
+
+Campaña propia incluida en el datapack `reinos-economia.zip` (solo servidor, los jugadores no instalan nada):
+- Al entrar por primera vez cada jugador recibe el libro **Crónicas de Valdrath** (si lo pierde: `/trigger libro`).
+- Pestaña **Crónicas de Valdrath** en los logros (tecla **L**) con 7 capítulos y 4 logros secretos/extra, cada uno con monedas, XP y un anuncio en el chat.
+- Se genera con `python3 herramientas/generar-historia.py` (textos, recompensas y jefes se editan ahí).
 
 ## 🗺️ Ruta de aventura sugerida (decenas de horas)
 

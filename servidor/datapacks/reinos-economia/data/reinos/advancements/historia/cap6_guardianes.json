@@ -1,0 +1,127 @@
+{
+  "parent": "reinos:historia/cap5_dragon",
+  "display": {
+    "icon": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "title": {
+      "text": "VI. Los Guardianes"
+    },
+    "description": {
+      "text": "Derrota a un guardián antiguo: un jefe de Mowzie's, de Cataclysm, el Wither o el Warden."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ferrous_wroughtnaut": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:ferrous_wroughtnaut"
+        }
+      }
+    },
+    "frostmaw": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:frostmaw"
+        }
+      }
+    },
+    "umvuthi": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:umvuthi"
+        }
+      }
+    },
+    "sculptor": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "mowziesmobs:sculptor"
+        }
+      }
+    },
+    "netherite_monstrosity": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:netherite_monstrosity"
+        }
+      }
+    },
+    "ancient_remnant": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:ancient_remnant"
+        }
+      }
+    },
+    "maledictus": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:maledictus"
+        }
+      }
+    },
+    "scylla": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "cataclysm:scylla"
+        }
+      }
+    },
+    "wither": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:wither"
+        }
+      }
+    },
+    "warden": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:warden"
+        }
+      }
+    },
+    "elder_guardian": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:elder_guardian"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/cap6_guardianes",
+    "experience": 600
+  },
+  "requirements": [
+    [
+      "ferrous_wroughtnaut",
+      "frostmaw",
+      "umvuthi",
+      "sculptor",
+      "netherite_monstrosity",
+      "ancient_remnant",
+      "maledictus",
+      "scylla",
+      "wither",
+      "warden",
+      "elder_guardian"
+    ]
+  ]
+}

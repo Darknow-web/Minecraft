@@ -1,0 +1,270 @@
+{
+  "parent": "reinos:historia/cap2_caminos",
+  "display": {
+    "icon": {
+      "item": "minecraft:skeleton_skull"
+    },
+    "title": {
+      "text": "III. Las Criptas"
+    },
+    "description": {
+      "text": "Entra en una mazmorra antigua de Valdrath. Lleva antorchas. Y valor. Sobre todo antorchas."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "skeleton_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "betterdungeons:skeleton_dungeon"
+          }
+        }
+      }
+    },
+    "zombie_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "betterdungeons:zombie_dungeon"
+          }
+        }
+      }
+    },
+    "spider_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "betterdungeons:spider_dungeon"
+          }
+        }
+      }
+    },
+    "small_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "betterdungeons:small_dungeon"
+          }
+        }
+      }
+    },
+    "small_nether_dungeon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "betterdungeons:small_nether_dungeon"
+          }
+        }
+      }
+    },
+    "infested_temple": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:infested_temple"
+          }
+        }
+      }
+    },
+    "plague_asylum": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:plague_asylum"
+          }
+        }
+      }
+    },
+    "mining_system": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:mining_system"
+          }
+        }
+      }
+    },
+    "foundry": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:foundry"
+          }
+        }
+      }
+    },
+    "keep_kayra": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:keep_kayra"
+          }
+        }
+      }
+    },
+    "illager_fort": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:illager_fort"
+          }
+        }
+      }
+    },
+    "thornborn_towers": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:thornborn_towers"
+          }
+        }
+      }
+    },
+    "scorched_mines": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:scorched_mines"
+          }
+        }
+      }
+    },
+    "shiraz_palace": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:shiraz_palace"
+          }
+        }
+      }
+    },
+    "monastery": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:monastery"
+          }
+        }
+      }
+    },
+    "coliseum": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:coliseum"
+          }
+        }
+      }
+    },
+    "typhon": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:typhon"
+          }
+        }
+      }
+    },
+    "abandoned_temple": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:abandoned_temple"
+          }
+        }
+      }
+    },
+    "mushroom_mines": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:mushroom_mines"
+          }
+        }
+      }
+    },
+    "undead_pirate_ship": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "dungeons_arise:undead_pirate_ship"
+          }
+        }
+      }
+    },
+    "stronghold": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "minecraft:stronghold"
+          }
+        }
+      }
+    },
+    "ancient_city": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "location": {
+            "structure": "minecraft:ancient_city"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/cap3_criptas",
+    "experience": 150
+  },
+  "requirements": [
+    [
+      "skeleton_dungeon",
+      "zombie_dungeon",
+      "spider_dungeon",
+      "small_dungeon",
+      "small_nether_dungeon",
+      "infested_temple",
+      "plague_asylum",
+      "mining_system",
+      "foundry",
+      "keep_kayra",
+      "illager_fort",
+      "thornborn_towers",
+      "scorched_mines",
+      "shiraz_palace",
+      "monastery",
+      "coliseum",
+      "typhon",
+      "abandoned_temple",
+      "mushroom_mines",
+      "undead_pirate_ship",
+      "stronghold",
+      "ancient_city"
+    ]
+  ]
+}

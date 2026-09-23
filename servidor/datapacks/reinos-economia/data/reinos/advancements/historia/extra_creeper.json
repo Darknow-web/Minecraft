@@ -1,0 +1,31 @@
+{
+  "parent": "reinos:historia/raiz",
+  "display": {
+    "icon": {
+      "item": "minecraft:creeper_head"
+    },
+    "title": {
+      "text": "Te lo advertimos"
+    },
+    "description": {
+      "text": "Muere abrazado por un creeper."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "boom": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:creeper"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/extra_creeper"
+  }
+}

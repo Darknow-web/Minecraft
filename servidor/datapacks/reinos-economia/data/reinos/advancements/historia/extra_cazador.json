@@ -1,0 +1,35 @@
+{
+  "parent": "reinos:historia/raiz",
+  "display": {
+    "icon": {
+      "item": "bountiful:bounty"
+    },
+    "title": {
+      "text": "Cazarrecompensas"
+    },
+    "description": {
+      "text": "Acepta tu primera misión de un tablón de misiones."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "mision": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bountiful:bounty"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "reinos:recompensas/extra_cazador"
+  }
+}

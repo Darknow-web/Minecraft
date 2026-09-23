@@ -6,8 +6,9 @@ gamemode=survival
 pvp=true
 # false = permite TLauncher (cuentas no premium). Protegido con el mod Auth: /register y /login
 online-mode=false
-white-list=true
-enforce-whitelist=true
+# Whitelist apagada: con TLauncher (offline) los UUID no coinciden. La proteccion la da el mod Auth (/register y /login)
+white-list=false
+enforce-whitelist=false
 spawn-protection=0
 # Necesario: volar en dragones, planeadores y habilidades hace que el servidor expulse jugadores si esta en false
 allow-flight=true

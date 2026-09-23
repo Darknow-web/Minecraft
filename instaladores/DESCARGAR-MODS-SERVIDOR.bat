@@ -198,8 +198,9 @@ curl -fsSL --retry 3 -o "%OUT%\mods\YungsExtras-1.20-Forge-4.0.3.jar" "https://c
 >>"%OUT%\server.properties" echo(pvp=true
 >>"%OUT%\server.properties" echo(# false = permite TLauncher (cuentas no premium). Protegido con el mod Auth: /register y /login
 >>"%OUT%\server.properties" echo(online-mode=false
->>"%OUT%\server.properties" echo(white-list=true
->>"%OUT%\server.properties" echo(enforce-whitelist=true
+>>"%OUT%\server.properties" echo(# Whitelist apagada: con TLauncher (offline) los UUID no coinciden. La proteccion la da el mod Auth (/register y /login)
+>>"%OUT%\server.properties" echo(white-list=false
+>>"%OUT%\server.properties" echo(enforce-whitelist=false
 >>"%OUT%\server.properties" echo(spawn-protection=0
 >>"%OUT%\server.properties" echo(# Necesario: volar en dragones, planeadores y habilidades hace que el servidor expulse jugadores si esta en false
 >>"%OUT%\server.properties" echo(allow-flight=true
