@@ -4,7 +4,7 @@ Modpack RPG para **Minecraft 1.20.1 (Forge 47.4.10)**, pensado para un servidor 
 dragones, jefes épicos, cientos de mazmorras, magia, reliquias, mochilas, teletransportes y razas jugables.
 Optimizado para correr en PCs normales.
 
-- **97 mods**, todos de Modrinth (descarga automática y verificada).
+- **98 mods**, todos de Modrinth (descarga automática y verificada).
 - **Probado:** el servidor arranca sin errores críticos con todos los mods (≈4,7 GB de RAM en uso; descarga de ~310 MB).
 - Todo está en formato [packwiz](https://packwiz.infra.link/): texto plano, fácil de actualizar y de configurar.
 
@@ -50,7 +50,7 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 
 1. En TLauncher elige la versión **Forge 1.20.1**, pulsa *Entrar* una vez (se instala) y cierra el juego.
 2. Descarga **`instaladores/INSTALAR-MODS-JUGADOR.bat`** y ábrelo con doble clic.
-   Descarga los 95 mods (~310 MB) directamente en `%APPDATA%\.minecraft\mods` y guarda tus mods anteriores en un respaldo.
+   Descarga los 96 mods (~310 MB) directamente en `%APPDATA%\.minecraft\mods` y guarda tus mods anteriores en un respaldo.
    Si Windows muestra *"Windows protegió su PC"*: *Más información → Ejecutar de todas formas*.
 3. En TLauncher: engranaje → **Memoria 6144 MB** (5120 si tu PC tiene 8 GB).
 4. *Multijugador* → IP del servidor. La primera vez escribe `/register TuClave TuClave`; después, `/login TuClave`.
@@ -58,7 +58,7 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 ## 🎮 Instalación con Prism Launcher o Modrinth App (alternativa)
 
 1. Instala **[Prism Launcher](https://prismlauncher.org/)** (gratis, recomendado) o la **[Modrinth App](https://modrinth.com/app)**.
-2. Descarga el archivo **`ReinosDeAventura-1.1.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
+2. Descarga el archivo **`ReinosDeAventura-1.2.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
 3. **Prism:** *Añadir instancia → Importar* → elige el `.mrpack`.
    **Modrinth App:** arrastra el `.mrpack` a la ventana.
 4. En la instancia: *Editar → Ajustes → Memoria* → **Máximo 6144 MB** (o 5120 si tu PC tiene 8 GB).
