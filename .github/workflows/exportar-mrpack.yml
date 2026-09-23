@@ -1,0 +1,36 @@
+name: Exportar modpack (.mrpack)
+
+on:
+  push:
+    paths: ["pack/**"]
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  exportar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+      - name: Instalar packwiz
+        run: go install github.com/packwiz/packwiz@latest
+      - name: Exportar .mrpack
+        working-directory: pack
+        run: |
+          VERSION=$(grep '^version' pack.toml | cut -d'"' -f2)
+          ~/go/bin/packwiz refresh --build
+          ~/go/bin/packwiz mr export -o "../ReinosDeAventura-${VERSION}.mrpack"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ReinosDeAventura-mrpack
+          path: ReinosDeAventura-*.mrpack
+      - name: Publicar release (solo en tags v*)
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ReinosDeAventura-*.mrpack
