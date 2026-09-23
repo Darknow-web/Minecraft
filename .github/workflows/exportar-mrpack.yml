@@ -34,3 +34,27 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: ReinosDeAventura-*.mrpack
+
+  servidor:
+    # Genera la carpeta del servidor (mods + config + server.properties) lista para subir a un hosting.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Descargar mods del servidor
+        run: |
+          mkdir -p servidor-hosting && cd servidor-hosting
+          curl -fsSLo pib.jar https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
+          curl -fsSLo packwiz-installer.jar https://github.com/packwiz/packwiz-installer/releases/latest/download/packwiz-installer.jar
+          java -jar pib.jar --bootstrap-no-update -g -s server ../pack/pack.toml
+          rm -f pib.jar packwiz-installer.jar packwiz.json
+          cp ../servidor/server.properties.plantilla server.properties
+          ls mods | wc -l
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ReinosDeAventura-servidor
+          path: servidor-hosting/
+          compression-level: 0
