@@ -2,7 +2,7 @@ name: Exportar modpack (.mrpack)
 
 on:
   push:
-    paths: ["pack/**"]
+    paths: ["pack/**", "servidor/**", ".github/workflows/**"]
     tags: ["v*"]
   workflow_dispatch:
 
