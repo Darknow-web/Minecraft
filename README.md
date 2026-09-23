@@ -4,8 +4,8 @@ Modpack RPG para **Minecraft 1.20.1 (Forge 47.4.10)**, pensado para un servidor 
 dragones, jefes épicos, cientos de mazmorras, magia, reliquias, mochilas, teletransportes y razas jugables.
 Optimizado para correr en PCs normales.
 
-- **95 mods**, todos de Modrinth (descarga automática y verificada).
-- **Probado:** el servidor arranca sin errores críticos con todos los mods (≈5 GB de RAM en uso).
+- **94 mods**, todos de Modrinth (descarga automática y verificada).
+- **Probado:** el servidor arranca sin errores críticos con todos los mods (≈4,7 GB de RAM en uso; descarga de ~310 MB).
 - Todo está en formato [packwiz](https://packwiz.infra.link/): texto plano, fácil de actualizar y de configurar.
 
 ---
@@ -16,7 +16,7 @@ Optimizado para correr en PCs normales.
 |---|---|
 | 🐉 **Dragones y criaturas míticas** | Ice and Fire (dragones de fuego/hielo/rayo que puedes criar y montar, hidras, gorgonas, cíclopes, trolls, serpientes marinas), Dragon Mounts: Legacy |
 | 👹 **Jefes y monstruos** | L_Ender's Cataclysm (jefes con arenas propias), Mowzie's Mobs, Mutant Monsters, Illager Invasion, Friends & Foes |
-| 🦊 **Fauna y biomas** | Alex's Mobs (+90 animales), Alex's Caves (biomas subterráneos únicos), Naturalist, Terralith + Tectonic (terreno espectacular) |
+| 🦊 **Fauna y biomas** | Alex's Mobs (+90 animales), Naturalist, Terralith + Tectonic (terreno espectacular) |
 | 🏰 **Mazmorras y estructuras** | When Dungeons Arise, todos los YUNG's (mazmorras, fortalezas, templos, minas, puentes), Dungeons and Taverns, Towns and Towers, Repurposed Structures, MVS Voyager Structures, Explorify, Structory |
 | 🎁 **Botín** | Lootr (cada jugador tiene su propio botín en cada cofre — ideal para grupos), Apotheosis (armas con rareza y afijos, encantamientos nuevos, jefes de mundo) |
 | ✨ **Magia y artefactos** | Iron's Spells 'n Spellbooks (hechizos y libros), Artifacts (reliquias en mazmorras), Simply Swords (armas únicas), Immersive Armors |
@@ -24,8 +24,8 @@ Optimizado para correr en PCs normales.
 | 🧬 **Personalización** | Origins (elige tu raza al entrar: cada una con poderes y debilidades) |
 | 🎒 **Mochilas** | Sophisticated Backpacks (mejorables), Traveler's Backpack (con tanques y herramientas) |
 | 🌀 **Viajes** | Waystones (red de teletransportes), Explorer's Compass (encuentra estructuras), Xaero's Minimap + World Map (mapa y puntos compartibles) |
-| 🍖 **Vida y construcción** | Farmer's Delight, Aquaculture 2 (pesca), Create (máquinas), Supplementaries, Comforts (sacos de dormir), Carry On |
-| 👥 **Multijugador** | Open Parties and Claims (equipos y proteger terrenos), Simple Voice Chat (voz por proximidad), Corpse (tus cosas quedan en tu cadáver al morir) |
+| 🍖 **Vida y construcción** | Farmer's Delight, Aquaculture 2 (pesca), Supplementaries, Comforts (sacos de dormir), Carry On |
+| 👥 **Multijugador** | Open Parties and Claims (equipos y proteger terrenos), Simple Voice Chat (voz por proximidad), Corpse (tus cosas quedan en tu cadáver al morir), Auth (contraseña `/register` y `/login` para servidores con TLauncher) |
 | 🚀 **Rendimiento** | Embeddium, ModernFix, FerriteCore, Canary, Entity Culling, ImmediatelyFast, Memory Leak Fix, AI Improvements, Clumps, spark, Chunky |
 | 🛠️ **Utilidades** | JEI (recetas), Jade (info al mirar bloques), AppleSkin, Mouse Tweaks, Controlling, Better Advancements |
 | 🌈 **Opcional** | Oculus (shaders, desactivado por defecto — solo PCs potentes) |
@@ -45,7 +45,16 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 
 ---
 
-## 🎮 Instalación para JUGADORES (5 minutos)
+## 🎮 Instalación para JUGADORES con TLauncher (lo más fácil)
+
+1. En TLauncher elige la versión **Forge 1.20.1**, pulsa *Entrar* una vez (se instala) y cierra el juego.
+2. Descarga **`instaladores/INSTALAR-MODS-JUGADOR.bat`** y ábrelo con doble clic.
+   Descarga los 92 mods (~310 MB) directamente en `%APPDATA%\.minecraft\mods` y guarda tus mods anteriores en un respaldo.
+   Si Windows muestra *"Windows protegió su PC"*: *Más información → Ejecutar de todas formas*.
+3. En TLauncher: engranaje → **Memoria 6144 MB** (5120 si tu PC tiene 8 GB).
+4. *Multijugador* → IP del servidor. La primera vez escribe `/register TuClave TuClave`; después, `/login TuClave`.
+
+## 🎮 Instalación con Prism Launcher o Modrinth App (alternativa)
 
 1. Instala **[Prism Launcher](https://prismlauncher.org/)** (gratis, recomendado) o la **[Modrinth App](https://modrinth.com/app)**.
 2. Descarga el archivo **`ReinosDeAventura-1.0.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
@@ -80,9 +89,10 @@ Hay tres opciones. **Elige una.**
 
 Busca un hosting de Minecraft con **8–10 GB de RAM** que permita Forge (ej.: BisectHosting, Apex, Shockbyte, PebbleHost…).
 1. Instala **Forge 1.20.1 – 47.4.10** desde su panel.
-2. Sube la carpeta `mods/` y `config/` generadas por el script de la Opción A (ejecútalo en tu PC primero)
-   **sin** los mods de solo-cliente (el script ya los excluye).
-3. Sube `servidor/server.properties.plantilla` renombrado a `server.properties`.
+2. En tu PC ejecuta **`instaladores/DESCARGAR-MODS-SERVIDOR.bat`**: crea la carpeta `subir-al-hosting` con `mods/`, `config/` y `server.properties`.
+3. Súbela a la carpeta principal del servidor con **FileZilla** (datos SFTP en el panel) y enciéndelo.
+
+> **TLauncher:** el servidor viene con `online-mode=false` para aceptar cuentas no premium, y el mod **Auth** obliga a cada jugador a usar contraseña (`/register` y `/login`) para que nadie entre con el nombre de otro.
 
 ### Opción C — VPS con Docker
 
@@ -142,7 +152,7 @@ Para que un ajuste llegue a **todos** (servidor y jugadores), pon el archivo en 
 4. **Magia** — Mesa de inscripción y libros de hechizos de **Iron's Spells**; mata magos y saquea torres para pergaminos.
 5. **Jefes intermedios** — Ferrous Wroughtnaut, Frostmaw (Mowzie's); gólems y bestias de Cataclysm; mutantes.
 6. **Dragones** — Encuentra una cueva o nido de dragón, derrota al dragón o roba un **huevo** e incúbalo (en fuego o en agua según el tipo). Criarlo lleva tiempo; de adulto se puede montar.
-7. **El Nether y las Cuevas de Alex** — Fortalezas renovadas y biomas subterráneos con jefes propios.
+7. **El Nether** — Fortalezas renovadas, bastiones y jefes de Cataclysm como Ignis.
 8. **Final** — Ender Dragon, luego los jefes grandes de Cataclysm (Ignis, The Harbinger, The Leviathan, Ender Guardian…).
 
 ---
@@ -158,7 +168,7 @@ packwiz update --all              # actualizar todo (¡prueba el servidor antes 
 packwiz mr export -o ../dist/ReinosDeAventura-X.Y.Z.mrpack   # nuevo archivo para jugadores
 ```
 
-Luego vuelve a ejecutar `instalar-servidor` (actualiza los mods del servidor) y reparte el nuevo `.mrpack`.
+Luego regenera los instaladores con `python3 herramientas/generar-instaladores.py`, vuelve a ejecutar `instalar-servidor` (actualiza los mods del servidor) y reparte el nuevo `.mrpack`.
 Al subir cambios de `pack/` a GitHub, la acción *Exportar modpack* genera el `.mrpack` automáticamente
 (y si creas un tag `v1.0.1`, lo publica como *Release*).
 
