@@ -4,7 +4,7 @@ Modpack RPG para **Minecraft 1.20.1 (Forge 47.4.10)**, pensado para un servidor 
 dragones, jefes épicos, cientos de mazmorras, magia, reliquias, mochilas, teletransportes y razas jugables.
 Optimizado para correr en PCs normales.
 
-- **94 mods**, todos de Modrinth (descarga automática y verificada).
+- **97 mods**, todos de Modrinth (descarga automática y verificada).
 - **Probado:** el servidor arranca sin errores críticos con todos los mods (≈4,7 GB de RAM en uso; descarga de ~310 MB).
 - Todo está en formato [packwiz](https://packwiz.infra.link/): texto plano, fácil de actualizar y de configurar.
 
@@ -25,6 +25,7 @@ Optimizado para correr en PCs normales.
 | 🎒 **Mochilas** | Sophisticated Backpacks (mejorables), Traveler's Backpack (con tanques y herramientas) |
 | 🌀 **Viajes** | Waystones (red de teletransportes), Explorer's Compass (encuentra estructuras), Xaero's Minimap + World Map (mapa y puntos compartibles) |
 | 🍖 **Vida y construcción** | Farmer's Delight, Aquaculture 2 (pesca), Supplementaries, Comforts (sacos de dormir), Carry On |
+| 💰 **Economía y misiones** | Lightman's Currency (monedas, billetera, cajeros, tiendas de jugadores y comerciantes NPC), Bountiful (tablones de misiones en las aldeas que pagan con monedas) |
 | 👥 **Multijugador** | Open Parties and Claims (equipos y proteger terrenos), Simple Voice Chat (voz por proximidad), Corpse (tus cosas quedan en tu cadáver al morir), Auth (contraseña `/register` y `/login` para servidores con TLauncher) |
 | 🚀 **Rendimiento** | Embeddium, ModernFix, FerriteCore, Canary, Entity Culling, ImmediatelyFast, Memory Leak Fix, AI Improvements, Clumps, spark, Chunky |
 | 🛠️ **Utilidades** | JEI (recetas), Jade (info al mirar bloques), AppleSkin, Mouse Tweaks, Controlling, Better Advancements |
@@ -49,7 +50,7 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 
 1. En TLauncher elige la versión **Forge 1.20.1**, pulsa *Entrar* una vez (se instala) y cierra el juego.
 2. Descarga **`instaladores/INSTALAR-MODS-JUGADOR.bat`** y ábrelo con doble clic.
-   Descarga los 92 mods (~310 MB) directamente en `%APPDATA%\.minecraft\mods` y guarda tus mods anteriores en un respaldo.
+   Descarga los 95 mods (~310 MB) directamente en `%APPDATA%\.minecraft\mods` y guarda tus mods anteriores en un respaldo.
    Si Windows muestra *"Windows protegió su PC"*: *Más información → Ejecutar de todas formas*.
 3. En TLauncher: engranaje → **Memoria 6144 MB** (5120 si tu PC tiene 8 GB).
 4. *Multijugador* → IP del servidor. La primera vez escribe `/register TuClave TuClave`; después, `/login TuClave`.
@@ -57,7 +58,7 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 ## 🎮 Instalación con Prism Launcher o Modrinth App (alternativa)
 
 1. Instala **[Prism Launcher](https://prismlauncher.org/)** (gratis, recomendado) o la **[Modrinth App](https://modrinth.com/app)**.
-2. Descarga el archivo **`ReinosDeAventura-1.0.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
+2. Descarga el archivo **`ReinosDeAventura-1.1.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
 3. **Prism:** *Añadir instancia → Importar* → elige el `.mrpack`.
    **Modrinth App:** arrastra el `.mrpack` a la ventana.
 4. En la instancia: *Editar → Ajustes → Memoria* → **Máximo 6144 MB** (o 5120 si tu PC tiene 8 GB).
@@ -91,6 +92,7 @@ Busca un hosting de Minecraft con **8–10 GB de RAM** que permita Forge (ej.: B
 1. Instala **Forge 1.20.1 – 47.4.10** desde su panel.
 2. En tu PC ejecuta **`instaladores/DESCARGAR-MODS-SERVIDOR.bat`**: crea la carpeta `subir-al-hosting` con `mods/`, `config/` y `server.properties`.
 3. Súbela a la carpeta principal del servidor con **FileZilla** (datos SFTP en el panel) y enciéndelo.
+4. Sube `world/datapacks/reinos-economia.zip` a la carpeta `world/datapacks/` del servidor: hace que las misiones paguen con monedas.
 
 > **TLauncher:** el servidor viene con `online-mode=false` para aceptar cuentas no premium, y el mod **Auth** obliga a cada jugador a usar contraseña (`/register` y `/login`) para que nadie entre con el nombre de otro.
 
@@ -143,6 +145,13 @@ Otros ajustes comunes (los archivos aparecen en `servidor-mc/config/` tras el pr
 Para que un ajuste llegue a **todos** (servidor y jugadores), pon el archivo en `pack/config/` y vuelve a exportar (ver abajo).
 
 ---
+
+## 💰 Economía
+
+- **Monedas:** cobre → hierro → oro → esmeralda → diamante → netherite (10 de una = 1 de la siguiente). Salen de mobs, cofres y misiones.
+- **Misiones:** busca el **tablón de misiones** (Bounty Board) en las aldeas, o fabrícalo. Entrega lo que pide y recibe monedas o botín. Las misiones cambian con el tiempo.
+- **Tiendas:** fabrica un *Trader* de Lightman's Currency, pon objetos y precio, y otros jugadores te compran aunque no estés conectado.
+- **Admin:** para un comerciante NPC que venda objetos raros, crea un Trader en modo creativo y llénalo de objetos. Los precios de las misiones se ajustan en `servidor/datapacks/reinos-economia/`.
 
 ## 🗺️ Ruta de aventura sugerida (decenas de horas)
 

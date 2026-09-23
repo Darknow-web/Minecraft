@@ -13,6 +13,7 @@ import tomllib
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 MODS = RAIZ / "pack" / "mods"
 SALIDA = RAIZ / "instaladores"
+DATAPACK_URL = "https://raw.githubusercontent.com/Darknow-web/Minecraft/HEAD/servidor/datapacks/reinos-economia.zip"
 VERSION = tomllib.loads((RAIZ / "pack" / "pack.toml").read_text())["version"]
 
 
@@ -105,10 +106,13 @@ def main():
         *lineas_descarga(servidor, "%OUT%\\mods"),
         *[f'>>"%OUT%\\config\\iceandfire-common.toml" echo({l}' for l in config_ice],
         *[f'>>"%OUT%\\server.properties" echo({bat_escape(l)}' for l in props],
+        'mkdir "%OUT%\\world\\datapacks"',
+        f'curl -fsSL --retry 3 -o "%OUT%\\world\\datapacks\\reinos-economia.zip" "{DATAPACK_URL}" || set FALLO=1',
         "echo.",
         'if "%FALLO%"=="1" (echo ALGUNOS MODS FALLARON. Revisa tu internet y vuelve a ejecutar. & pause & exit /b 1)',
         "echo LISTO. Sube las carpetas mods, config y el archivo server.properties",
         "echo desde \"subir-al-hosting\" a la carpeta principal del servidor.",
+        "echo Y el archivo world\\datapacks\\reinos-economia.zip a la carpeta world/datapacks del servidor.",
         'explorer "%OUT%"',
         "pause",
     ])

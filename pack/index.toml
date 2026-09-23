@@ -70,6 +70,11 @@ hash = "52b4f29eb4a4392ef085617292842dc9fc84d86c318da5ce470b24eab77f6bdc"
 metafile = true
 
 [[files]]
+file = "mods/bountiful.pw.toml"
+hash = "b317b19055dd6bb83ad65a3dc937fd69eb458e5cc265c023a7de0ac6d39bbef0"
+metafile = true
+
+[[files]]
 file = "mods/caelus.pw.toml"
 hash = "8a8ea0af79b88d9c192d208aa5be4bacd934e2b92d4721566e2e796eb9761e10"
 metafile = true
@@ -230,6 +235,11 @@ hash = "caad4ddb3d27205f4bf2d1f5b3421c0f4491878bd81d2c50a440e735831eef27"
 metafile = true
 
 [[files]]
+file = "mods/kambrik.pw.toml"
+hash = "c87302d1a4dc50b28115cd591dd32f751a0b9ca880f20658d2e537cb117a7df8"
+metafile = true
+
+[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "70a4ecd9d0c04ad20aeb976c1ee28933ce48a0a1f43df42deafaeb2ad7235297"
 metafile = true
@@ -237,6 +247,11 @@ metafile = true
 [[files]]
 file = "mods/l_enders-cataclysm.pw.toml"
 hash = "dfdd246954f9bcfbff66668558b17ba5b3e75a12ba6031c441750a472670fbd8"
+metafile = true
+
+[[files]]
+file = "mods/lightmans-currency.pw.toml"
+hash = "b866dfa492c2f8a94e6864196720e1af291770b8b7600516dc4887de39336a31"
 metafile = true
 
 [[files]]

@@ -1,12 +1,12 @@
 name = "Reinos de Aventura"
 author = "darknow-web"
-version = "1.0.0"
+version = "1.1.0"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "260673c1becfe742efee869bdc0f656b1688e5073286f7377b56944a93f783e1"
+hash = "21f581fcc094af480c28ce084780351b2be487ab8e62cd8d6b08cd81243a6e6d"
 
 [versions]
 forge = "47.4.10"
