@@ -40,7 +40,7 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 | | Mínimo | Recomendado |
 |---|---|---|
 | **Jugadores (PC)** | 8 GB de RAM, gráfica integrada moderna | 16 GB de RAM, gráfica dedicada |
-| RAM asignada a Minecraft | 5 GB | 6–8 GB |
+| RAM asignada a Minecraft | 3 GB (PC de 8 GB) | **4 GB** (no más: medido, el juego usa ~1,1 GB reales) |
 | **Servidor** (6–10 jugadores) | 4 núcleos, 8 GB de RAM | 4+ núcleos rápidos, 10–12 GB de RAM, SSD |
 | Java | 17 (recomendado) | Temurin 17 |
 
@@ -52,16 +52,16 @@ Lista exacta con versiones: carpeta [`pack/mods/`](pack/mods).
 2. Descarga **`instaladores/INSTALAR-MODS-JUGADOR.bat`** y ábrelo con doble clic.
    Descarga los 96 mods (~310 MB) directamente en `%APPDATA%\.minecraft\mods` y guarda tus mods anteriores en un respaldo.
    Si Windows muestra *"Windows protegió su PC"*: *Más información → Ejecutar de todas formas*.
-3. En TLauncher: engranaje → **Memoria 6144 MB** (5120 si tu PC tiene 8 GB).
+3. En TLauncher: engranaje → **Memoria 4096 MB** (3072 si tu PC tiene 8 GB). **No pongas más**: si asignas casi toda tu RAM, Windows se queda sin memoria y el juego se congela en "Cargando terreno".
 4. *Multijugador* → IP del servidor. La primera vez escribe `/register TuClave TuClave`; después, `/login TuClave`.
 
 ## 🎮 Instalación con Prism Launcher o Modrinth App (alternativa)
 
 1. Instala **[Prism Launcher](https://prismlauncher.org/)** (gratis, recomendado) o la **[Modrinth App](https://modrinth.com/app)**.
-2. Descarga el archivo **`ReinosDeAventura-1.2.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
+2. Descarga el archivo **`ReinosDeAventura-1.3.0.mrpack`** (en la carpeta [`dist/`](dist) o en *Releases* de GitHub).
 3. **Prism:** *Añadir instancia → Importar* → elige el `.mrpack`.
    **Modrinth App:** arrastra el `.mrpack` a la ventana.
-4. En la instancia: *Editar → Ajustes → Memoria* → **Máximo 6144 MB** (o 5120 si tu PC tiene 8 GB).
+4. En la instancia: *Editar → Ajustes → Memoria* → **Máximo 4096 MB** (3072 si tu PC tiene 8 GB).
 5. Abre el juego → *Multijugador* → agrega la IP del servidor.
 
 > ¿Quieres shaders? En Prism: *Editar → Mods* → activa **Oculus**, y pon un pack como *Complementary Shaders* en `shaderpacks/`.
@@ -191,6 +191,19 @@ Al subir cambios de `pack/` a GitHub, la acción *Exportar modpack* genera el `.
 **Servidor y jugadores deben tener la misma versión del pack**, o el juego no dejará conectar.
 
 ---
+
+## 🪶 Rendimiento en PCs con poca RAM (medido)
+
+Probado con un cliente real conectado al servidor (distancia de renderizado 8):
+- Memoria **realmente usada** dentro del mundo: **~1,1 GB**. Con **3 GB asignados** el juego va fluido (pausas de limpieza de ~25 ms cada 20 s, sin bloqueos).
+- El instalador activa **ModernFix dynamic resources** (carga modelos solo cuando se usan): menos RAM y entrada más rápida.
+- El error típico es asignar **demasiada** memoria: con 9,5 GB en una PC de 12 GB, Windows se quedó sin RAM y el juego se congeló.
+
+| RAM de la PC | Memoria en TLauncher |
+|---|---|
+| 8 GB | 3072 MB |
+| 12–16 GB | 4096 MB |
+| 32 GB | 4096–6144 MB |
 
 ## ❓ Problemas comunes
 

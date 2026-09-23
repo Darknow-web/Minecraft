@@ -5,6 +5,10 @@ file = "config/iceandfire-common.toml"
 hash = "93538ec0821a2192e70dfe5338303e2c8f59a73a92f32f94535a84755b585757"
 
 [[files]]
+file = "config/modernfix-mixins.properties"
+hash = "c80b808d0bf484c6ef704b4e765429290b75811253fb2e9819fee93d40dc694a"
+
+[[files]]
 file = "mods/ai-improvements.pw.toml"
 hash = "a2c8b09b27514ebbf069afb6b28e5adb643c333dda0668b118e54bd949910ec5"
 metafile = true

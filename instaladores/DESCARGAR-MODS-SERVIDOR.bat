@@ -1,6 +1,6 @@
 @echo off
 chcp 65001 >nul
-title Reinos de Aventura 1.2.0 - archivos del servidor
+title Reinos de Aventura 1.3.0 - archivos del servidor
 echo Descarga los mods del SERVIDOR en la carpeta "subir-al-hosting" (junto a este archivo).
 echo Luego sube su contenido al hosting con FileZilla (SFTP).
 pause

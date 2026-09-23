@@ -1,8 +1,8 @@
 @echo off
 chcp 65001 >nul
-title Reinos de Aventura 1.2.0 - instalador de mods
+title Reinos de Aventura 1.3.0 - instalador de mods
 echo ==========================================================
-echo   REINOS DE AVENTURA 1.2.0 - Instalador para jugadores
+echo   REINOS DE AVENTURA 1.3.0 - Instalador para jugadores
 echo ==========================================================
 echo.
 echo ANTES de seguir: en TLauncher elige la version "Forge 1.20.1",
@@ -211,10 +211,15 @@ echo [96/96] YUNG's Extras
 curl -fsSL --retry 3 -o "%MODS%\YungsExtras-1.20-Forge-4.0.3.jar" "https://cdn.modrinth.com/data/ZYgyPyfq/versions/h4m8J7w8/YungsExtras-1.20-Forge-4.0.3.jar" || set FALLO=1
 echo.
 if "%FALLO%"=="1" (echo ALGUNOS MODS FALLARON. Revisa tu internet y vuelve a ejecutar este archivo. & pause & exit /b 1)
+rem Optimizacion de RAM: ModernFix carga los modelos solo cuando se usan
+if not exist "%MC%\config" mkdir "%MC%\config"
+findstr /c:"mixin.perf.dynamic_resources=true" "%MC%\config\modernfix-mixins.properties" >nul 2>&1 || (echo mixin.perf.dynamic_resources=true)>>"%MC%\config\modernfix-mixins.properties"
 echo ==========================================================
 echo   LISTO. Ahora en TLauncher:
 echo   1. Elige la version  Forge 1.20.1
-echo   2. Ajustes (engranaje) - Memoria: 6144 MB (5120 si tu PC tiene 8 GB)
+echo   2. Ajustes (engranaje) - Memoria: 4096 MB  (3072 si tu PC tiene 8 GB)
+echo      NO pongas mas: con mas memoria Windows se queda sin RAM y el juego se congela.
+echo      En el juego: Opciones - Video - Distancia de renderizado 8.
 echo   3. Entrar - Multijugador - agrega la IP del servidor
 echo   4. La primera vez escribe en el chat:  /register TuClave TuClave
 echo      Las siguientes veces:               /login TuClave
